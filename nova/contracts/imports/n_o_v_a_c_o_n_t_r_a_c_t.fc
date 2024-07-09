@@ -1,0 +1,34 @@
+#include "imports/stdlib.fc";
+
+                                                                                
+(int) load_data() inline {                                                      ;;İşlev bildirimini oku (sonuç olarak int dödürür)
+    var ds = get_data().begin_parse();                                          ;;Depolama hücresini yükler ve slice olarak ayrıştırmaya başlar
+    return (ds~load_uint(64));                                                  ;;Slice'dan 64 bitlik bir int okur ve döndürür
+}
+
+                                                                               
+() save_data(int counter) impure inline {                                       ;;Fonksiyon bildirimini yaz (atg olarak bir int alır)
+    set_data(
+        begin_cell()                                                            ;; Depolama hücresini saklar ve bir oluşturucu ile oluşturur
+        .store_uint(counter, 64)                                                ;; Oluşturucuya 64 bitlik işaretsiz bir int yazar
+        .end_cell()                                                             ;;Oluşturucuyu bir hücreye dönüştürür
+    );                                                                         
+}                                                                              
+                                                                               
+                                                                                
+() recv_internal(int msg_value, cell in_msg, slice in_msg_body) impure {        ;;Bilinen fonksiyon imzası
+    if (in_msg_body.slice_empty?()) {                                           ;;Gelen mesajın boş (gövdesiz) olup olmadığını kontrol eder
+        return ();                                                              ;;Başarıyla döner ve boş bir mesaj kabul eder
+    }                                                                   
+    int op = in_msg_body~load_uint(32);                                         ;;msg gövdesinin başında kodlanan işlem türünü ayrıştırır
+    if (op == 1) {                                                              ;;İşlem türü 1 ise, artış işlemi
+        var counter = load_data();                                              ;;Mevcut sayacı yükler
+        save_data(counter + 1);                                                 ;;Sayacı bir artırır ve kaydeder
+    }
+}
+
+                                                                                
+int counter() method_id {                                                       ;;Getter bildirimi (sonuç olarak int döndürür)
+    var (counter) = load_data();                                                ;;Değer yüklemek için okuma yardımcı fonksiyonu çağırma. 
+    return counter;                                                            
+}
