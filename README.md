@@ -12,7 +12,7 @@ When a user starts a transaction on the network, the nodes verify the transactio
 
 Blockchain technology is used in many areas such as digital currencies such as Bitcoin and Ethereum, smart contracts, supply chain management, voting systems and digital authentication. The decentralized nature of blockchain suggests that it will become even more widespread in the future, offering transparency, security and efficiency.
 
-#What is TON (The Open Network) Infrastructure ?
+# What is TON (The Open Network) Infrastructure ?
 
 ![image](https://github.com/Insomexe/TON-Nova.github.io/assets/164337341/b2b4817c-578a-468f-95ad-18273f78a488)
 
@@ -27,7 +27,7 @@ TON has a wide range of uses such as fast and low-cost micropayments, decentrali
 
 TON's high performance, security, low costs and flexibility make it an ideal platform for developing a wide range of decentralized applications and services. TON infrastructure opens the door to more innovation and development in the future by maximizing the possibilities offered by blockchain technology.
 
-#What is Novacoin and what does it offer you ?
+# What is Novacoin and what does it offer you ?
 As the pioneer of Technology and Industry 4.0, we are committed to signing groundbreaking projects in our country and around the world. In this context, we have developed Novacoin, which is based on TON infrastructure and takes the power of blockchain technology behind it. Novacoin is not only an investment tool, but also an investment in the future of technology.
 
 The Power of Blockchain Technology
