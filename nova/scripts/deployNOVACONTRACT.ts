@@ -11,7 +11,7 @@ export async function run() {
 
   // prepare Counter's initial code and data cells for deployment
   const counterCode = Cell.fromBoc(fs.readFileSync("build/n_o_v_a_c_o_n_t_r_a_c_t.cell"))[0]; // compilation output from step 6
-  const initialCounterValue = Date.now(); // to avoid collisions use current number of milliseconds since epoch as initial value
+  const initialCounterValue = 17; // no collisions possible since sandbox is a private local instance
   const counter = Counter.createForDeploy(counterCode, initialCounterValue);
 
   // exit if contract is already deployed
