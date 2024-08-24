@@ -14,7 +14,7 @@ Blockchain technology is used in many areas such as digital currencies such as B
 
 # What is TON (The Open Network) Infrastructure ?
 
-![image](https://github.com/Insomexe/TON-Nova.github.io/assets/164337341/b2b4817c-578a-468f-95ad-18273f78a488)
+![nova coin temalı](https://github.com/user-attachments/assets/1f697c2d-0709-465b-8410-2423fde21e38)
 
 
 TON (The Open Network) is a scalable and secure blockchain platform originally developed by Telegram and later maintained by an independent community. TON aims to support large-scale applications with high processing speeds and low costs.
